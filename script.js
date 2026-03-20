@@ -1,0 +1,83 @@
+// ============================================
+// ContentSpy Landing — Interactions
+// ============================================
+
+// Scroll animations (IntersectionObserver)
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+
+    // Nav scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.querySelector('.faq-q').addEventListener('click', () => {
+            const wasActive = item.classList.contains('active');
+            // Close all
+            document.querySelectorAll('.faq-item.active').forEach(i => i.classList.remove('active'));
+            // Toggle current
+            if (!wasActive) item.classList.add('active');
+        });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const target = document.querySelector(link.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
+    // Parallax on hero screenshot (subtle tilt on mouse move)
+    const heroVisual = document.querySelector('.hero-visual');
+    if (heroVisual) {
+        const wrap = heroVisual.querySelector('.hero-screenshot-wrap');
+        document.addEventListener('mousemove', (e) => {
+            if (!wrap) return;
+            const rect = heroVisual.getBoundingClientRect();
+            if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+            const cx = (e.clientX / window.innerWidth - 0.5) * 2;
+            const cy = (e.clientY / window.innerHeight - 0.5) * 2;
+            wrap.style.transform = `rotateX(${2 - cy * 3}deg) rotateY(${cx * 3}deg)`;
+        }, { passive: true });
+    }
+
+    // Parallax floating screenshots on scroll
+    const floaters = document.querySelectorAll('.floater');
+    if (floaters.length) {
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            floaters.forEach((f, i) => {
+                const speed = i === 0 ? 0.06 : -0.04;
+                f.style.transform = `translateY(${scrollY * speed}px)`;
+            });
+        }, { passive: true });
+    }
+
+    // Feature screenshots — tilt on hover
+    document.querySelectorAll('.feature-screenshot-wrap').forEach(wrap => {
+        wrap.addEventListener('mousemove', (e) => {
+            const rect = wrap.getBoundingClientRect();
+            const cx = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+            const cy = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+            wrap.style.transform = `translateY(-6px) scale(1.01) rotateY(${cx * 4}deg) rotateX(${-cy * 4}deg)`;
+        }, { passive: true });
+        wrap.addEventListener('mouseleave', () => {
+            wrap.style.transform = '';
+        });
+    });
+});

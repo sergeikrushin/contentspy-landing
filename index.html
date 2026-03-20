@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContentSpy — Competitor Content Intelligence for Instagram, YouTube & TikTok</title>
+    <meta name="description" content="Monitor competitors' content strategy across Instagram, YouTube & TikTok. AI-powered viral detection, content analysis, and actionable insights. Desktop app, privacy-first.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+    <div class="container nav-inner">
+        <a href="#" class="nav-logo">
+            <span class="logo-icon">🔍</span>
+            <span class="logo-text">Content<span class="accent">Spy</span></span>
+        </a>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#faq">FAQ</a>
+        </div>
+        <a href="#pricing" class="btn btn-sm btn-primary">Get ContentSpy</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-badges">
+            <span class="badge badge-platform"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="5"></circle><circle cx="18.5" cy="5.5" r="1.5"></circle></svg> Instagram</span>
+            <span class="badge badge-platform"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.94 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.49z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"></polygon></svg> YouTube</span>
+            <span class="badge badge-platform"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4-4M15 8a4 4 0 1 0-4 4"></path></svg> TikTok</span>
+        </div>
+        <h1 class="hero-title">
+            Know What Your Competitors Post.<br>
+            <span class="gradient-text">Why It Works.</span><br>
+            And How to Beat Them.
+        </h1>
+        <p class="hero-subtitle">
+            ContentSpy monitors Instagram, YouTube & TikTok competitors 24/7 — transcribes every video, detects viral patterns, and tells you exactly what to post next.
+        </p>
+        <div class="hero-cta">
+            <a href="#pricing" class="btn btn-lg btn-primary btn-glow">
+                Start Free 7-Day Trial
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+            </a>
+            <span class="hero-micro">No credit card required</span>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-screenshot-wrap" data-animate>
+                <img src="img/dashboard.png" alt="ContentSpy Dashboard" class="hero-screenshot" loading="eager">
+            </div>
+            <!-- Floating secondary screenshots -->
+            <div class="hero-floaters">
+                <img src="img/ai-analysis.png" alt="AI Analysis" class="floater floater-1">
+                <img src="img/statistics.png" alt="Statistics" class="floater floater-2">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PAIN POINTS -->
+<section class="pain" id="pain">
+    <div class="container">
+        <div class="pain-grid">
+            <div class="pain-card" data-animate>
+                <div class="pain-icon">⏰</div>
+                <div class="pain-problem">You spend hours manually watching competitor Reels</div>
+                <div class="pain-arrow">↓</div>
+                <div class="pain-solution">Auto-sync transcribes every video. Read 50 reels in 5 minutes.</div>
+            </div>
+            <div class="pain-card" data-animate>
+                <div class="pain-icon">🎲</div>
+                <div class="pain-problem">You guess what content will work</div>
+                <div class="pain-arrow">↓</div>
+                <div class="pain-solution">AI analyzes viral patterns and tells you exactly why videos blow up.</div>
+            </div>
+            <div class="pain-card" data-animate>
+                <div class="pain-icon">💭</div>
+                <div class="pain-problem">Your content ideas come from gut feeling</div>
+                <div class="pain-arrow">↓</div>
+                <div class="pain-solution">Get 30-day content plans cloned from proven viral strategies.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DEMO -->
+<section class="demo" id="demo">
+    <div class="container">
+        <div class="section-header">
+            <h2>From Competitor URL to Content Strategy<br><span class="gradient-text">In Under 5 Minutes</span></h2>
+        </div>
+        <div class="demo-steps">
+            <div class="demo-step" data-animate>
+                <div class="step-num">1</div>
+                <div class="step-text">Paste competitor profile URL</div>
+            </div>
+            <div class="demo-connector"></div>
+            <div class="demo-step" data-animate>
+                <div class="step-num">2</div>
+                <div class="step-text">ContentSpy syncs & transcribes</div>
+            </div>
+            <div class="demo-connector"></div>
+            <div class="demo-step" data-animate>
+                <div class="step-num">3</div>
+                <div class="step-text">AI detects viral patterns</div>
+            </div>
+            <div class="demo-connector"></div>
+            <div class="demo-step" data-animate>
+                <div class="step-num">4</div>
+                <div class="step-text">Get your content plan</div>
+            </div>
+        </div>
+        <div class="demo-placeholder">
+            <div class="demo-video-box">
+                <div class="play-btn">▶</div>
+                <div class="demo-label">Watch 60-second demo</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Features</span>
+            <h2>Everything You Need to<br><span class="gradient-text">Outsmart the Competition</span></h2>
+        </div>
+
+        <!-- Feature Block A -->
+        <div class="feature-block" data-animate>
+            <div class="feature-info">
+                <div class="feature-tag">Monitor</div>
+                <h3>Track Everything They Post</h3>
+                <ul class="feature-list">
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Instagram, YouTube & TikTok from one dashboard
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Auto-sync every hour, day, or week
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Every video transcribed with AI hooks
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Growth dashboard: followers, views, trends
+                    </li>
+                </ul>
+            </div>
+            <div class="feature-visual">
+                <div class="feature-screenshot-wrap">
+                    <img src="img/content-hub.png" alt="Content Hub" class="feature-screenshot" loading="lazy">
+                </div>
+            </div>
+        </div>
+
+        <!-- Feature Block B -->
+        <div class="feature-block reverse" data-animate>
+            <div class="feature-info">
+                <div class="feature-tag">Analyze</div>
+                <h3>Understand Why It Works</h3>
+                <ul class="feature-list">
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5"><path d="M20 6L9 17l-5-5"></path></svg>
+                        AI Profile Analytics — themes, formats, timing
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Viral Detection — auto-flags 5x+ performers
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5"><path d="M20 6L9 17l-5-5"></path></svg>
+                        AI Chat — ask questions about any competitor
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Cross-Profile Trends — what's hot right now
+                    </li>
+                </ul>
+            </div>
+            <div class="feature-visual">
+                <div class="feature-screenshot-wrap">
+                    <img src="img/ai-analysis.png" alt="AI Analysis" class="feature-screenshot" loading="lazy">
+                </div>
+            </div>
+        </div>
+
+        <!-- Feature Block C -->
+        <div class="feature-block" data-animate>
+            <div class="feature-info">
+                <div class="feature-tag">Create</div>
+                <h3>Create Better Content, Faster</h3>
+                <ul class="feature-list">
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Clone Strategy — 30-day plan from viral data
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Idea Generator — 20 ideas matched to your style
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Storyboard — frame-by-frame breakdown of any viral
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Custom Prompt Library for deep analysis
+                    </li>
+                </ul>
+            </div>
+            <div class="feature-visual">
+                <div class="feature-screenshot-wrap">
+                    <img src="img/profile-overview.png" alt="Profile Overview & Growth" class="feature-screenshot" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- USP -->
+<section class="usp" id="usp">
+    <div class="container">
+        <div class="usp-grid">
+            <div class="usp-card" data-animate>
+                <div class="usp-icon">🔒</div>
+                <h4>Privacy-First</h4>
+                <p>All data stays on YOUR computer. No cloud servers. No tracking. You own everything.</p>
+            </div>
+            <div class="usp-card" data-animate>
+                <div class="usp-icon">💰</div>
+                <h4>No Subscription</h4>
+                <p>Pay once, use forever. No monthly fees. No hidden charges. Lifetime access.</p>
+            </div>
+            <div class="usp-card" data-animate>
+                <div class="usp-icon">🔑</div>
+                <h4>Your API Keys</h4>
+                <p>You control AI costs. Average spend: $3-5/month even with heavy use.</p>
+            </div>
+            <div class="usp-card" data-animate>
+                <div class="usp-icon">📡</div>
+                <h4>Works Offline</h4>
+                <p>Downloaded data available without internet. Analyze anytime, anywhere.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="proof" id="proof">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Testimonials</span>
+            <h2>Trusted by Content Professionals</h2>
+        </div>
+        <div class="proof-grid">
+            <div class="proof-card" data-animate>
+                <div class="proof-stars">★★★★★</div>
+                <p class="proof-text">"Replaced 3 hours of manual competitor monitoring with 10 minutes of reading transcripts. Game changer for our content calendar."</p>
+                <div class="proof-author">
+                    <div class="proof-avatar">A</div>
+                    <div>
+                        <div class="proof-name">Alex R.</div>
+                        <div class="proof-role">SMM Manager, Digital Agency</div>
+                    </div>
+                </div>
+            </div>
+            <div class="proof-card" data-animate>
+                <div class="proof-stars">★★★★★</div>
+                <p class="proof-text">"Our clients love the PDF reports — it looks like we did weeks of research. The AI analysis alone is worth the price."</p>
+                <div class="proof-author">
+                    <div class="proof-avatar">M</div>
+                    <div>
+                        <div class="proof-name">Maria K.</div>
+                        <div class="proof-role">Content Strategist, Agency Owner</div>
+                    </div>
+                </div>
+            </div>
+            <div class="proof-card" data-animate>
+                <div class="proof-stars">★★★★★</div>
+                <p class="proof-text">"Found a viral hook pattern I was completely missing. Applied it to my next 3 reels — one got 2M views. Not kidding."</p>
+                <div class="proof-author">
+                    <div class="proof-avatar">J</div>
+                    <div>
+                        <div class="proof-name">Jake T.</div>
+                        <div class="proof-role">Content Creator, 340K followers</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Pricing</span>
+            <h2>One Payment. Lifetime Access.<br><span class="gradient-text">No Monthly Fees.</span></h2>
+            <p class="section-sub">Launch pricing — prices go up soon</p>
+        </div>
+        <div class="pricing-grid">
+            <!-- Solo -->
+            <div class="price-card" data-animate>
+                <div class="price-tier">Solo</div>
+                <div class="price-tagline">Track competitors</div>
+                <div class="price-amount">
+                    <span class="price-dollar">$</span>79
+                    <span class="price-old">$99</span>
+                </div>
+                <div class="price-period">one-time payment</div>
+                <ul class="price-features">
+                    <li class="included"><span class="check">✓</span> Instagram, YouTube & TikTok</li>
+                    <li class="included"><span class="check">✓</span> Unlimited profiles & sync</li>
+                    <li class="included"><span class="check">✓</span> Auto-transcription + hooks</li>
+                    <li class="included"><span class="check">✓</span> Viral video detection</li>
+                    <li class="included"><span class="check">✓</span> Basic statistics</li>
+                    <li class="included"><span class="check">✓</span> Search all transcripts</li>
+                    <li class="included"><span class="check">✓</span> Export TXT / Markdown</li>
+                    <li class="locked"><span class="lock">🔒</span> AI Analytics</li>
+                    <li class="locked"><span class="lock">🔒</span> AI Chat</li>
+                    <li class="locked"><span class="lock">🔒</span> Storyboard</li>
+                    <li class="locked"><span class="lock">🔒</span> Clone Strategy</li>
+                </ul>
+                <div class="price-device">1 device</div>
+                <a href="#" class="btn btn-outline btn-block">Get Solo</a>
+            </div>
+
+            <!-- Pro -->
+            <div class="price-card featured" data-animate>
+                <div class="price-badge">Most Popular</div>
+                <div class="price-tier">Pro</div>
+                <div class="price-tagline">Understand why competitors win</div>
+                <div class="price-amount">
+                    <span class="price-dollar">$</span>179
+                    <span class="price-old">$249</span>
+                </div>
+                <div class="price-period">one-time payment</div>
+                <ul class="price-features">
+                    <li class="included"><span class="check">✓</span> Everything in Solo, plus:</li>
+                    <li class="included highlight"><span class="check">✓</span> AI Profile Analytics</li>
+                    <li class="included highlight"><span class="check">✓</span> AI Chat with any profile</li>
+                    <li class="included highlight"><span class="check">✓</span> Storyboard / frame breakdown</li>
+                    <li class="included highlight"><span class="check">✓</span> Clone Strategy (30-day plan)</li>
+                    <li class="included highlight"><span class="check">✓</span> Idea Generator (20 ideas)</li>
+                    <li class="included highlight"><span class="check">✓</span> Custom Prompt Library</li>
+                    <li class="included highlight"><span class="check">✓</span> Full Growth Dashboard</li>
+                    <li class="included highlight"><span class="check">✓</span> Cross-Profile Trends</li>
+                    <li class="included"><span class="check">✓</span> 12 months of updates</li>
+                </ul>
+                <div class="price-device">1 device</div>
+                <a href="#" class="btn btn-primary btn-block btn-glow">Get Pro — Best Value</a>
+            </div>
+
+            <!-- Agency -->
+            <div class="price-card" data-animate>
+                <div class="price-tier">Agency</div>
+                <div class="price-tagline">Turn insights into client work</div>
+                <div class="price-amount">
+                    <span class="price-dollar">$</span>599
+                    <span class="price-old">$999</span>
+                </div>
+                <div class="price-period">one-time payment</div>
+                <ul class="price-features">
+                    <li class="included"><span class="check">✓</span> Everything in Pro, plus:</li>
+                    <li class="included highlight"><span class="check">✓</span> 3 devices</li>
+                    <li class="included highlight"><span class="check">✓</span> Projects / Agency mode</li>
+                    <li class="included highlight"><span class="check">✓</span> Client-ready PDF reports</li>
+                    <li class="included highlight"><span class="check">✓</span> Multi-profile comparison</li>
+                    <li class="included"><span class="check">✓</span> Priority support</li>
+                    <li class="included"><span class="check">✓</span> Lifetime updates</li>
+                    <li class="included"><span class="check">✓</span> Setup assistance</li>
+                </ul>
+                <div class="price-device">3 devices</div>
+                <a href="#" class="btn btn-outline btn-block">Get Agency</a>
+            </div>
+        </div>
+        <p class="pricing-note">All plans include a 7-day free trial (full Pro features) · 14-day money-back guarantee</p>
+    </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section class="comparison" id="comparison">
+    <div class="container">
+        <details class="comparison-details">
+            <summary class="comparison-toggle">View full feature comparison →</summary>
+            <div class="comparison-table-wrap">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Solo</th>
+                            <th class="highlight-col">Pro</th>
+                            <th>Agency</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Instagram / YouTube / TikTok</td><td>✅</td><td class="highlight-col">✅</td><td>✅</td></tr>
+                        <tr><td>Unlimited profiles & sync</td><td>✅</td><td class="highlight-col">✅</td><td>✅</td></tr>
+                        <tr><td>Auto-transcription + hooks</td><td>✅</td><td class="highlight-col">✅</td><td>✅</td></tr>
+                        <tr><td>Viral video detection</td><td>✅</td><td class="highlight-col">✅</td><td>✅</td></tr>
+                        <tr><td>Basic statistics</td><td>✅</td><td class="highlight-col">✅</td><td>✅</td></tr>
+                        <tr><td>Full-text search</td><td>✅</td><td class="highlight-col">✅</td><td>✅</td></tr>
+                        <tr><td>Export TXT / Markdown</td><td>✅</td><td class="highlight-col">✅</td><td>✅</td></tr>
+                        <tr><td>AI Profile Analytics</td><td>🔒</td><td class="highlight-col">✅</td><td>✅</td></tr>
+                        <tr><td>AI Chat with profile</td><td>🔒</td><td class="highlight-col">✅</td><td>✅</td></tr>
+                        <tr><td>Storyboard / frame breakdown</td><td>🔒</td><td class="highlight-col">✅</td><td>✅</td></tr>
+                        <tr><td>Clone Strategy (30-day plan)</td><td>🔒</td><td class="highlight-col">✅</td><td>✅</td></tr>
+                        <tr><td>Idea Generator</td><td>🔒</td><td class="highlight-col">✅</td><td>✅</td></tr>
+                        <tr><td>Custom Prompt Library</td><td>🔒</td><td class="highlight-col">✅</td><td>✅</td></tr>
+                        <tr><td>Full Growth Dashboard</td><td>🔒</td><td class="highlight-col">✅</td><td>✅</td></tr>
+                        <tr><td>Cross-Profile Trends</td><td>🔒</td><td class="highlight-col">✅</td><td>✅</td></tr>
+                        <tr><td>AI Discover (semantic search)</td><td>🔒</td><td class="highlight-col">✅</td><td>✅</td></tr>
+                        <tr><td>Translation (20+ languages)</td><td>🔒</td><td class="highlight-col">✅</td><td>✅</td></tr>
+                        <tr><td>Projects / Agency mode</td><td>🔒</td><td class="highlight-col">🔒</td><td>✅</td></tr>
+                        <tr><td>Client-ready PDF reports</td><td>🔒</td><td class="highlight-col">🔒</td><td>✅</td></tr>
+                        <tr><td>Multi-profile comparison</td><td>🔒</td><td class="highlight-col">🔒</td><td>✅</td></tr>
+                        <tr><td>Devices</td><td>1</td><td class="highlight-col">1</td><td>3</td></tr>
+                        <tr><td>Updates</td><td>Security</td><td class="highlight-col">12 months</td><td>Lifetime</td></tr>
+                        <tr><td>Support</td><td>Email</td><td class="highlight-col">Email</td><td>Priority</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </details>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">How It Works</span>
+            <h2>Up and Running in 2 Minutes</h2>
+        </div>
+        <div class="how-grid">
+            <div class="how-step" data-animate>
+                <div class="how-num">1</div>
+                <h4>Download & Install</h4>
+                <p>One-click macOS installer. Double-click, drag to Applications. Done.</p>
+            </div>
+            <div class="how-step" data-animate>
+                <div class="how-num">2</div>
+                <h4>Add Competitors</h4>
+                <p>Paste any Instagram, YouTube, or TikTok profile URL. That's it.</p>
+            </div>
+            <div class="how-step" data-animate>
+                <div class="how-num">3</div>
+                <h4>ContentSpy Does the Work</h4>
+                <p>Auto-syncs, transcribes every video, detects viral patterns. 24/7.</p>
+            </div>
+            <div class="how-step" data-animate>
+                <div class="how-num">4</div>
+                <h4>Get Actionable Insights</h4>
+                <p>AI analysis, content ideas, 30-day plans, reports. Ready to use.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">FAQ</span>
+            <h2>Questions? We've Got Answers.</h2>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item" data-animate>
+                <button class="faq-q">Do I need any technical knowledge?</button>
+                <div class="faq-a"><p>Not at all. Paste a URL, click "Sync", and ContentSpy handles everything. The onboarding wizard guides you through setup in under 2 minutes.</p></div>
+            </div>
+            <div class="faq-item" data-animate>
+                <button class="faq-q">Is my data safe? Where is it stored?</button>
+                <div class="faq-a"><p>100% on your computer. ContentSpy is a desktop app — no cloud, no servers storing your data. Your competitor research stays private.</p></div>
+            </div>
+            <div class="faq-item" data-animate>
+                <button class="faq-q">What API keys do I need?</button>
+                <div class="faq-a"><p>OpenAI API key (for transcription & AI analysis, avg $3-5/month) and optionally Apify (free trial available, for reliable Instagram scraping). ContentSpy walks you through setup.</p></div>
+            </div>
+            <div class="faq-item" data-animate>
+                <button class="faq-q">Mac or Windows?</button>
+                <div class="faq-a"><p>macOS is available now. Windows version is coming in v1.1 — join the waitlist to get notified.</p></div>
+            </div>
+            <div class="faq-item" data-animate>
+                <button class="faq-q">Is there a free trial?</button>
+                <div class="faq-a"><p>Yes! 7 days of full Pro features, no credit card required. After the trial, you keep Solo features for free forever — or upgrade to unlock AI analytics.</p></div>
+            </div>
+            <div class="faq-item" data-animate>
+                <button class="faq-q">Can I switch devices?</button>
+                <div class="faq-a"><p>Yes. Deactivate your old device with one click, then activate on the new one. Agency plan supports 3 simultaneous devices.</p></div>
+            </div>
+            <div class="faq-item" data-animate>
+                <button class="faq-q">What's your refund policy?</button>
+                <div class="faq-a"><p>14-day no-questions-asked money-back guarantee. If ContentSpy isn't for you, we'll refund you instantly.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+    <div class="container">
+        <h2>Stop Guessing.<br><span class="gradient-text">Start Spying.</span></h2>
+        <p>Your competitors are posting right now. Know what works before they do.</p>
+        <div class="final-cta-buttons">
+            <a href="#pricing" class="btn btn-lg btn-primary btn-glow">
+                Start Free 7-Day Trial
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+            </a>
+            <a href="#pricing" class="btn btn-lg btn-ghost">See Pricing</a>
+        </div>
+        <p class="final-micro">macOS app · No subscription · No credit card for trial</p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-brand">
+            <span class="logo-icon">🔍</span>
+            <span class="logo-text">Content<span class="accent">Spy</span></span>
+            <p class="footer-tagline">Built for creators who take content seriously.</p>
+        </div>
+        <div class="footer-links">
+            <a href="#pricing">Pricing</a>
+            <a href="#features">Features</a>
+            <a href="#faq">FAQ</a>
+            <a href="#">Support</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms</a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ContentSpy. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
