@@ -31,6 +31,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Hamburger menu
+    const hamburger = document.getElementById('navHamburger');
+    const mobileNav = document.getElementById('navMobile');
+    if (hamburger && mobileNav) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+        });
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileNav.classList.remove('active');
+            });
+        });
+    }
+
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(link => {
         link.addEventListener('click', (e) => {

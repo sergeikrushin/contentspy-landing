@@ -5,10 +5,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ContentSpy — Competitor Content Intelligence for Instagram, YouTube & TikTok</title>
     <meta name="description" content="Monitor competitors' content strategy across Instagram, YouTube & TikTok. AI-powered viral detection, content analysis, and actionable insights. Desktop app, privacy-first.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <link rel="alternate icon" href="img/favicon.svg">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://contentspy.co/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://contentspy.co/">
+    <meta property="og:title" content="ContentSpy — Competitor Content Intelligence for Instagram, YouTube & TikTok">
+    <meta property="og:description" content="Monitor competitors' content strategy across Instagram, YouTube & TikTok. AI-powered viral detection, full transcription, and actionable insights. Desktop app, privacy-first, one-time payment.">
+    <meta property="og:image" content="https://contentspy.co/img/dashboard.png">
+    <meta property="og:site_name" content="ContentSpy">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ContentSpy — Competitor Content Intelligence">
+    <meta name="twitter:description" content="Monitor competitors on Instagram, YouTube & TikTok. AI transcription, viral detection, content plans. One-time payment, privacy-first.">
+    <meta name="twitter:image" content="https://contentspy.co/img/dashboard.png">
+
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="ContentSpy">
+    <meta name="keywords" content="competitor analysis tool, social media intelligence, Instagram analytics, TikTok competitor research, YouTube content analysis, viral content detection, SMM tool, content strategy, macOS app">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Schema.org: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ContentSpy",
+      "operatingSystem": "macOS",
+      "applicationCategory": "BusinessApplication",
+      "description": "Desktop app that monitors competitors on Instagram, YouTube & TikTok. AI-powered viral detection, full transcription, and content intelligence. Privacy-first, one-time payment.",
+      "url": "https://contentspy.co",
+      "offers": [
+        { "@type": "Offer", "name": "Solo", "price": "79", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "Pro", "price": "179", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "Agency", "price": "599", "priceCurrency": "USD" }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "ratingCount": "3",
+        "bestRating": "5"
+      },
+      "featureList": [
+        "Instagram, YouTube & TikTok monitoring",
+        "AI-powered transcription",
+        "Viral score detection",
+        "Content hook analysis",
+        "AI Profile Analytics",
+        "Clone Strategy content planning",
+        "Privacy-first: all data stored locally",
+        "One-time payment, no subscription"
+      ]
+    }
+    </script>
+
+    <!-- Schema.org: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need any technical knowledge?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Not at all. Paste a URL, click Sync, and ContentSpy handles everything. The onboarding wizard guides you through setup in under 2 minutes." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data safe? Where is it stored?",
+          "acceptedAnswer": { "@type": "Answer", "text": "100% on your computer. ContentSpy is a desktop app — no cloud, no servers storing your data. Your competitor research stays private." }
+        },
+        {
+          "@type": "Question",
+          "name": "What API keys do I need?",
+          "acceptedAnswer": { "@type": "Answer", "text": "OpenAI API key for transcription and AI analysis (avg $3-5/month) and optionally Apify (free trial available, for reliable Instagram scraping). ContentSpy walks you through setup." }
+        },
+        {
+          "@type": "Question",
+          "name": "Mac or Windows?",
+          "acceptedAnswer": { "@type": "Answer", "text": "macOS is available now. Windows version is coming in v2.2 — join the waitlist to get notified when it launches in Q3 2026." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a free trial?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes! 7 days of full Pro features, no credit card required. After the trial, you keep Solo features for free forever — or upgrade to unlock AI analytics." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is your refund policy?",
+          "acceptedAnswer": { "@type": "Answer", "text": "14-day no-questions-asked money-back guarantee. If ContentSpy isn't for you, we'll refund you instantly." }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
 
@@ -24,9 +125,22 @@
             <a href="#pricing">Pricing</a>
             <a href="#faq">FAQ</a>
         </div>
-        <a href="#pricing" class="btn btn-sm btn-primary">Get ContentSpy</a>
+        <a href="#pricing" class="btn btn-sm btn-primary nav-cta-desktop">Get ContentSpy</a>
+        <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </div>
 </nav>
+
+<!-- MOBILE NAV -->
+<div class="nav-mobile" id="navMobile">
+    <a href="#features" class="nav-mobile-link">Features</a>
+    <a href="#pricing" class="nav-mobile-link">Pricing</a>
+    <a href="#faq" class="nav-mobile-link">FAQ</a>
+    <a href="#pricing" class="btn btn-primary btn-block" style="margin-top:8px;">Get ContentSpy →</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -85,6 +199,30 @@
                 <div class="pain-problem">Your content ideas come from gut feeling</div>
                 <div class="pain-arrow">↓</div>
                 <div class="pain-solution">Get 30-day content plans cloned from proven viral strategies.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STATS BAR -->
+<section class="stats-bar">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item" data-animate>
+                <div class="stat-num">748M+</div>
+                <div class="stat-label">Views Analyzed</div>
+            </div>
+            <div class="stat-item" data-animate>
+                <div class="stat-num">27.2×</div>
+                <div class="stat-label">Peak Viral Score Detected</div>
+            </div>
+            <div class="stat-item" data-animate>
+                <div class="stat-num">3</div>
+                <div class="stat-label">Platforms in One App</div>
+            </div>
+            <div class="stat-item" data-animate>
+                <div class="stat-num">$0</div>
+                <div class="stat-label">Monthly Fee — Ever</div>
             </div>
         </div>
     </div>
@@ -181,11 +319,11 @@
                     </li>
                     <li>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5"><path d="M20 6L9 17l-5-5"></path></svg>
-                        AI Chat — ask questions about any competitor
+                        Full Transcript Search — find any topic across all profiles
                     </li>
                     <li>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5"><path d="M20 6L9 17l-5-5"></path></svg>
-                        Cross-Profile Trends — what's hot right now
+                        Cross-Profile Trends — spot what's going viral right now
                     </li>
                 </ul>
             </div>
@@ -196,7 +334,69 @@
             </div>
         </div>
 
-        <!-- Feature Block C -->
+        <!-- Feature Block C — Hooks (Viral Intelligence) -->
+        <div class="feature-block" data-animate>
+            <div class="feature-info">
+                <div class="feature-tag">Viral Intelligence</div>
+                <h3>Find the Hooks That Make<br>Videos Explode</h3>
+                <ul class="feature-list">
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Viral Score — instantly spot videos with <strong style="color:#f97316;">27.2×</strong> engagement multipliers
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Opening Hook Analysis — see the exact first 3 seconds that hooked millions
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Pattern Detection — recurring hooks across all competitor profiles at once
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Copy-paste hook templates extracted directly from proven viral content
+                    </li>
+                </ul>
+            </div>
+            <div class="feature-visual">
+                <div class="feature-screenshot-wrap">
+                    <img src="img/hooks.png" alt="Viral Hooks Analysis — ContentSpy" class="feature-screenshot" loading="lazy">
+                </div>
+            </div>
+        </div>
+
+        <!-- Feature Block D — AI Chat -->
+        <div class="feature-block reverse" data-animate>
+            <div class="feature-info">
+                <div class="feature-tag">AI Chat</div>
+                <h3>Ask Anything About<br>Any Competitor</h3>
+                <ul class="feature-list">
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Chat with AI that knows every video your competitor posted
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5"><path d="M20 6L9 17l-5-5"></path></svg>
+                        "What topics get the most views?" — answered in seconds
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Cross-profile queries — compare strategies across multiple competitors
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Uses your own API key — full privacy, no data leaves your Mac
+                    </li>
+                </ul>
+            </div>
+            <div class="feature-visual">
+                <div class="feature-screenshot-wrap">
+                    <img src="img/ai-chat.png" alt="AI Chat with competitor profiles — ContentSpy" class="feature-screenshot" loading="lazy">
+                </div>
+            </div>
+        </div>
+
+        <!-- Feature Block E — Create -->
         <div class="feature-block" data-animate>
             <div class="feature-info">
                 <div class="feature-tag">Create</div>
@@ -222,7 +422,7 @@
             </div>
             <div class="feature-visual">
                 <div class="feature-screenshot-wrap">
-                    <img src="img/profile-overview.png" alt="Profile Overview & Growth" class="feature-screenshot" loading="lazy">
+                    <img src="img/analytics.png" alt="Content Strategy & Analytics — ContentSpy" class="feature-screenshot" loading="lazy">
                 </div>
             </div>
         </div>
@@ -490,7 +690,7 @@
             </div>
             <div class="faq-item" data-animate>
                 <button class="faq-q">Mac or Windows?</button>
-                <div class="faq-a"><p>macOS is available now. Windows version is coming in v1.1 — join the waitlist to get notified.</p></div>
+                <div class="faq-a"><p>macOS is available now. Windows version is coming in v2.2 — launching Q3 2026. <a href="mailto:hello@contentspy.co" style="color:var(--accent);">Join the waitlist</a> to get notified first.</p></div>
             </div>
             <div class="faq-item" data-animate>
                 <button class="faq-q">Is there a free trial?</button>
