@@ -487,40 +487,35 @@ body {
     height: 2px;
     background: var(--border-light);
 }
-.demo-placeholder {
-    max-width: 800px;
+.demo-video-wrap {
+    max-width: 900px;
     margin: 0 auto;
-}
-.demo-video-box {
-    aspect-ratio: 16/9;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
+    position: relative;
     border-radius: var(--radius-lg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 0 60px rgba(249,115,22,0.15);
 }
-.demo-video-box:hover {
-    border-color: var(--accent);
-    background: var(--bg-card-hover);
+.demo-video {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    background: var(--bg-card);
 }
-.play-btn {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
+.demo-video-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
     background: var(--accent);
     color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    box-shadow: 0 0 30px var(--accent-glow);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
 }
-.demo-label { font-size: 14px; color: var(--text-muted); }
 
 /* ============================================
    FEATURES
