@@ -862,6 +862,78 @@ body {
 }
 
 /* ============================================
+   COMPETITOR COMPARISON
+   ============================================ */
+.vs-section {
+    padding: 100px 0;
+    background: var(--bg-card);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+.vs-table-wrap {
+    overflow-x: auto;
+    margin-top: 48px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+.vs-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+.vs-table th, .vs-table td {
+    padding: 14px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+.vs-table th.vs-feature-col, .vs-table td:first-child {
+    text-align: left;
+}
+.vs-table th {
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--text-muted);
+    background: rgba(255,255,255,0.02);
+}
+.vs-table td {
+    color: var(--text-secondary);
+}
+.vs-table tr:last-child td { border-bottom: none; }
+.vs-us-col {
+    background: rgba(249, 115, 22, 0.06) !important;
+    color: var(--text-primary) !important;
+    font-weight: 600;
+}
+.vs-table th.vs-us-col {
+    color: var(--accent) !important;
+}
+.vs-highlight-row td { background: rgba(249, 115, 22, 0.03); }
+.vs-winner {
+    color: var(--accent) !important;
+    font-weight: 700;
+    font-size: 16px;
+}
+.vs-unique-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin-left: 8px;
+    vertical-align: middle;
+    opacity: 0.8;
+}
+@media (max-width: 768px) {
+    .vs-table { font-size: 12px; }
+    .vs-table th, .vs-table td { padding: 10px 12px; }
+    .vs-unique-badge { display: none; }
+}
+
+/* ============================================
    HOW IT WORKS
    ============================================ */
 .how {
