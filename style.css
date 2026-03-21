@@ -1314,3 +1314,114 @@ body {
     .mockup-stats { grid-template-columns: repeat(2, 1fr); }
     .price-card { padding: 28px 20px; }
 }
+
+/* === PRICING URGENCY === */
+.pricing-urgency {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(249,115,22,0.1);
+    border: 1px solid rgba(249,115,22,0.3);
+    border-radius: 100px;
+    padding: 0.4rem 1rem;
+    font-size: 0.875rem;
+    color: #f97316;
+    margin-top: 0.75rem;
+}
+.countdown {
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.03em;
+}
+
+/* === TRUST SIGNALS === */
+.price-trust {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+/* === PROOF RESULT BADGES === */
+.proof-result {
+    display: inline-block;
+    background: rgba(249,115,22,0.12);
+    color: #f97316;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 100px;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+/* === STICKY MOBILE CTA === */
+.sticky-mobile-cta {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(10,10,20,0.97);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 0.75rem 1rem;
+    backdrop-filter: blur(12px);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+.sticky-mobile-cta.visible {
+    transform: translateY(0);
+}
+.sticky-cta-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 480px;
+    margin: 0 auto;
+}
+.sticky-cta-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+.sticky-cta-info strong {
+    font-size: 0.95rem;
+    color: #fff;
+}
+.sticky-cta-info span {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+@media (max-width: 768px) {
+    .sticky-mobile-cta {
+        display: block;
+    }
+}
+
+/* === WAITLIST FORM === */
+.waitlist-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    max-width: 400px;
+}
+.waitlist-input {
+    flex: 1;
+    padding: 0.5rem 0.875rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+    font-size: 0.875rem;
+    outline: none;
+    font-family: inherit;
+}
+.waitlist-input:focus {
+    border-color: var(--accent);
+}
+.waitlist-input::placeholder {
+    color: rgba(255,255,255,0.35);
+}

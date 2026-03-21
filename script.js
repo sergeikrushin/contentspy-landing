@@ -97,3 +97,45 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// === COUNTDOWN TIMER ===
+function updateCountdown() {
+    const deadline = new Date('2026-03-27T23:59:59');
+    const now = new Date();
+    const diff = deadline - now;
+    if (diff <= 0) {
+        const el = document.getElementById('pricingCountdown');
+        if (el) el.textContent = 'Offer expired';
+        return;
+    }
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const el = document.getElementById('pricingCountdown');
+    if (el) el.textContent = `${days}d ${String(hours).padStart(2,'0')}h ${String(mins).padStart(2,'0')}m`;
+}
+updateCountdown();
+setInterval(updateCountdown, 30000);
+
+// === STICKY MOBILE CTA ===
+const stickyBar = document.getElementById('stickyMobileCta');
+if (stickyBar) {
+    let shown = false;
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400 && !shown) {
+            stickyBar.classList.add('visible');
+            shown = true;
+        }
+    }, { passive: true });
+}
+
+// === WINDOWS WAITLIST FORM ===
+const waitlistForm = document.getElementById('windowsWaitlist');
+if (waitlistForm) {
+    waitlistForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        waitlistForm.style.display = 'none';
+        const success = document.getElementById('waitlistSuccess');
+        if (success) success.style.display = 'block';
+    });
+}
