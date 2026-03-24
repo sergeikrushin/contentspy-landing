@@ -1261,14 +1261,7 @@ body {
     transform: translateY(0) scale(1);
 }
 
-/* Floating CTA glow animation */
-@keyframes ctaGlow {
-    0%, 100% { box-shadow: 0 0 30px var(--accent-glow), 0 4px 15px rgba(0,0,0,0.3); }
-    50% { box-shadow: 0 0 60px var(--accent-glow), 0 6px 20px rgba(0,0,0,0.4); }
-}
-.btn-glow {
-    animation: ctaGlow 3s ease-in-out infinite;
-}
+/* Floating CTA glow animation — replaced by ctaPulse below */
 
 /* ============================================
    RESPONSIVE
@@ -1425,3 +1418,108 @@ body {
 .waitlist-input::placeholder {
     color: rgba(255,255,255,0.35);
 }
+
+/* ============================================
+   SCROLL & ENTRANCE ANIMATIONS
+   ============================================ */
+
+/* Base animate */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+[data-animate].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays для групп */
+[data-animate]:nth-child(2) { transition-delay: 0.1s; }
+[data-animate]:nth-child(3) { transition-delay: 0.2s; }
+[data-animate]:nth-child(4) { transition-delay: 0.3s; }
+
+/* Feature blocks — текст и скрин навстречу */
+.feature-block:not(.reverse) .feature-text {
+  opacity: 0; transform: translateX(-30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.feature-block:not(.reverse) .feature-screenshot-wrap {
+  opacity: 0; transform: translateX(30px);
+  transition: opacity 0.7s ease 0.15s, transform 0.7s ease 0.15s;
+}
+.feature-block.reverse .feature-screenshot-wrap {
+  opacity: 0; transform: translateX(-30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.feature-block.reverse .feature-text {
+  opacity: 0; transform: translateX(30px);
+  transition: opacity 0.7s ease 0.15s, transform 0.7s ease 0.15s;
+}
+.feature-block.visible .feature-text,
+.feature-block.visible .feature-screenshot-wrap {
+  opacity: 1; transform: translateX(0);
+}
+
+/* How-steps stagger */
+.how-step:nth-child(1) { transition-delay: 0s; }
+.how-step:nth-child(2) { transition-delay: 0.15s; }
+.how-step:nth-child(3) { transition-delay: 0.3s; }
+.how-step:nth-child(4) { transition-delay: 0.45s; }
+
+/* How-num scale pop */
+.how-num {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.how-step.visible .how-num {
+  animation: popIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+@keyframes popIn {
+  from { transform: scale(0.5); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+
+/* Pricing stagger */
+.price-card:nth-child(1) { transition-delay: 0s; }
+.price-card:nth-child(2) { transition-delay: 0.15s; }
+.price-card:nth-child(3) { transition-delay: 0.3s; }
+
+/* Featured price card — subtle glow on appear */
+.price-card.featured[data-animate].visible {
+  animation: featuredAppear 0.8s ease both;
+}
+@keyframes featuredAppear {
+  from { opacity: 0; transform: translateY(24px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Proof cards stagger */
+.proof-card:nth-child(1) { transition-delay: 0s; }
+.proof-card:nth-child(2) { transition-delay: 0.15s; }
+.proof-card:nth-child(3) { transition-delay: 0.3s; }
+
+/* Final CTA button pulse */
+.btn-glow {
+  animation: ctaPulse 2.5s ease-in-out infinite;
+}
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: 0 4px 20px rgba(249,115,22,0.4); }
+  50%       { box-shadow: 0 4px 40px rgba(249,115,22,0.7), 0 0 60px rgba(249,115,22,0.2); }
+}
+
+/* Hero elements entrance */
+.hero-badges { opacity: 0; transform: translateY(-10px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.hero h1     { opacity: 0; transform: translateY(20px);  transition: opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s; }
+.hero .hero-subtitle { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s; }
+.hero .hero-cta  { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s; }
+
+.hero-loaded .hero-badges,
+.hero-loaded .hero h1,
+.hero-loaded .hero .hero-subtitle,
+.hero-loaded .hero .hero-cta { opacity: 1; transform: translateY(0); }
+
+/* Floaters entrance */
+.floater-1 { opacity: 0; transform: translateX(20px); transition: opacity 0.7s ease 0.5s, transform 0.7s ease 0.5s; }
+.floater-2 { opacity: 0; transform: translateX(-20px); transition: opacity 0.7s ease 0.6s, transform 0.7s ease 0.6s; }
+.hero-loaded .floater-1,
+.hero-loaded .floater-2 { opacity: 1; transform: translateX(0); }

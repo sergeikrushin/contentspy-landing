@@ -4,6 +4,38 @@
 
 // Scroll animations (IntersectionObserver)
 document.addEventListener('DOMContentLoaded', () => {
+    // Hero entrance animation
+    setTimeout(() => document.querySelector('.hero').classList.add('hero-loaded'), 100);
+
+    // Stats counter animation
+    const animateCounter = (el, target, suffix, decimals = 0) => {
+        const duration = 1800;
+        const start = performance.now();
+        const update = (now) => {
+            const progress = Math.min((now - start) / duration, 1);
+            const ease = 1 - Math.pow(1 - progress, 3);
+            const val = (target * ease).toFixed(decimals);
+            el.textContent = val + suffix;
+            if (progress < 1) requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+    };
+
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const el = entry.target;
+            const raw = el.dataset.count;
+            if (!raw) return;
+            const suffix = el.dataset.suffix || '';
+            const decimals = el.dataset.decimals ? parseInt(el.dataset.decimals) : 0;
+            animateCounter(el, parseFloat(raw), suffix, decimals);
+            statsObserver.unobserve(el);
+        });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('[data-count]').forEach(el => statsObserver.observe(el));
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
