@@ -766,6 +766,45 @@
     </div>
 </section>
 
+<!-- LEAD MAGNET -->
+<section style="padding:64px 0;background:linear-gradient(180deg,#0a0a0a 0%,#0d0d14 100%);border-top:1px solid #1a1a2a">
+    <div class="container" style="max-width:560px;text-align:center">
+        <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:#818cf8;text-transform:uppercase;margin-bottom:12px">Free resource</div>
+        <h2 style="font-size:clamp(24px,4vw,36px);font-weight:800;color:#fff;margin-bottom:12px">The Viral Hook Swipe File</h2>
+        <p style="color:#666;font-size:15px;line-height:1.6;margin-bottom:28px">47 proven hook patterns extracted from the top 1% of Instagram and TikTok posts — with real view counts. Free, instantly.</p>
+        <form id="leadMagnetForm" data-source="lead-magnet" style="display:flex;gap:10px;max-width:420px;margin:0 auto 10px">
+            <input type="email" name="email" placeholder="your@email.com" required
+                style="flex:1;padding:13px 16px;border-radius:10px;border:1px solid #2a2a3a;background:#111;color:#eee;font-size:14px;outline:none" />
+            <button type="submit" data-label="Send it →"
+                style="padding:13px 20px;border-radius:10px;border:none;background:#818cf8;color:#fff;font-size:14px;font-weight:700;cursor:pointer;white-space:nowrap">
+                Send it →
+            </button>
+        </form>
+        <div id="leadMagnetStatus" style="display:none;color:#22c55e;font-size:13px;margin-top:8px"></div>
+        <p style="font-size:11px;color:#333;margin-top:8px">No spam. Unsubscribe anytime.</p>
+    </div>
+</section>
+
+<!-- EXIT-INTENT POPUP -->
+<div id="exitIntentPopup" style="display:none;position:fixed;inset:0;z-index:10001;background:rgba(0,0,0,0.88);align-items:center;justify-content:center;padding:20px">
+    <div style="background:#111;border:1px solid #1e1e2e;border-radius:20px;max-width:400px;width:100%;padding:36px 32px;position:relative;text-align:center">
+        <button id="exitIntentClose" style="position:absolute;top:14px;right:16px;background:none;border:none;color:#555;font-size:20px;cursor:pointer;line-height:1">✕</button>
+        <div style="font-size:36px;margin-bottom:12px">🎯</div>
+        <h3 style="font-size:20px;font-weight:800;color:#fff;margin-bottom:8px">Wait — grab this first</h3>
+        <p style="font-size:13px;color:#888;line-height:1.6;margin-bottom:20px">47 viral hook patterns, free. See the exact openings driving millions of views right now.</p>
+        <form id="exitIntentForm" data-source="exit-intent" style="display:flex;flex-direction:column;gap:10px">
+            <input type="email" name="email" placeholder="your@email.com" required
+                style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid #2a2a2a;background:#1a1a1a;color:#eee;font-size:14px;outline:none;box-sizing:border-box" />
+            <button type="submit" data-label="Send Me the Hooks →"
+                style="width:100%;padding:13px;border-radius:10px;border:none;background:#818cf8;color:#fff;font-size:14px;font-weight:700;cursor:pointer">
+                Send Me the Hooks →
+            </button>
+        </form>
+        <div id="exitIntentStatus" style="display:none;color:#22c55e;font-size:13px;margin-top:10px"></div>
+        <p style="font-size:11px;color:#333;margin-top:10px">No spam. Unsubscribe anytime.</p>
+    </div>
+</div>
+
 <!-- FINAL CTA -->
 <section class="final-cta">
     <div class="container">

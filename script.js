@@ -161,13 +161,76 @@ if (stickyBar) {
     }, { passive: true });
 }
 
-// === WINDOWS WAITLIST FORM ===
-const waitlistForm = document.getElementById('windowsWaitlist');
-if (waitlistForm) {
-    waitlistForm.addEventListener('submit', function(e) {
+// === EMAIL LEAD MAGNET FORM ===
+// Replace YOUR_FORMSPREE_ID with your Formspree form ID (e.g. "xpwzabcd")
+// Get one free at formspree.io
+const FORMSPREE_ID = 'YOUR_FORMSPREE_ID';
+
+async function submitLeadMagnet(formEl, statusEl) {
+    const emailInput = formEl.querySelector('input[type="email"]');
+    if (!emailInput) return;
+    const email = emailInput.value.trim();
+    if (!email) return;
+    const btn = formEl.querySelector('button[type="submit"]');
+    if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+    try {
+        const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+            method: 'POST',
+            headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, source: formEl.dataset.source || 'landing' }),
+        });
+        if (res.ok) {
+            formEl.style.display = 'none';
+            if (statusEl) { statusEl.textContent = '✓ Check your inbox!'; statusEl.style.display = 'block'; }
+            localStorage.setItem('cs_lead_captured', '1');
+        } else {
+            if (btn) { btn.disabled = false; btn.textContent = btn.dataset.label || 'Send'; }
+            if (statusEl) { statusEl.textContent = 'Something went wrong — try again.'; statusEl.style.display = 'block'; }
+        }
+    } catch {
+        if (btn) { btn.disabled = false; btn.textContent = btn.dataset.label || 'Send'; }
+    }
+}
+
+// Lead magnet section form
+const leadForm = document.getElementById('leadMagnetForm');
+if (leadForm) {
+    leadForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        waitlistForm.style.display = 'none';
-        const success = document.getElementById('waitlistSuccess');
-        if (success) success.style.display = 'block';
+        submitLeadMagnet(leadForm, document.getElementById('leadMagnetStatus'));
     });
 }
+
+// === EXIT-INTENT POPUP ===
+(function() {
+    if (localStorage.getItem('cs_lead_captured')) return;
+    let triggered = false;
+    function showExitPopup() {
+        if (triggered) return;
+        triggered = true;
+        const popup = document.getElementById('exitIntentPopup');
+        if (popup) popup.style.display = 'flex';
+    }
+    document.addEventListener('mouseleave', function(e) {
+        if (e.clientY < 10) showExitPopup();
+    });
+    // Mobile: show after 60s of inactivity
+    let mobileTimer = setTimeout(() => {
+        if (!localStorage.getItem('cs_lead_captured')) showExitPopup();
+    }, 60000);
+    document.addEventListener('touchstart', () => { clearTimeout(mobileTimer); }, { once: true });
+
+    const exitForm = document.getElementById('exitIntentForm');
+    if (exitForm) {
+        exitForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            submitLeadMagnet(exitForm, document.getElementById('exitIntentStatus'));
+        });
+    }
+    const exitClose = document.getElementById('exitIntentClose');
+    if (exitClose) exitClose.addEventListener('click', () => {
+        const popup = document.getElementById('exitIntentPopup');
+        if (popup) popup.style.display = 'none';
+        localStorage.setItem('cs_lead_captured', 'dismissed');
+    });
+})();
