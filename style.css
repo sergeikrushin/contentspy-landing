@@ -1562,7 +1562,7 @@ body {
     background: linear-gradient(135deg, #ffaa40, #ff8c00, #ffd27a, #ffaa40);
     background-size: 300% 300%;
     z-index: -1;
-    opacity: 0.5;
+    opacity: 0.25;
     animation: founderGlow 6s ease infinite;
 }
 @keyframes founderGlow {
@@ -1570,11 +1570,33 @@ body {
     50% { background-position: 100% 50%; }
 }
 .price-card.founder-edition .price-tier {
-    background: linear-gradient(90deg, #ffaa40, #ff8c00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #ffd27a;
     font-weight: 800;
+    font-size: 22px;
+}
+.price-card.founder-edition .price-tagline {
+    color: rgba(255, 255, 255, 0.8);
+}
+.price-card.founder-edition .price-amount {
+    color: #fff;
+}
+.price-card.founder-edition .price-period {
+    color: rgba(255, 255, 255, 0.7);
+}
+.price-card.founder-edition .price-features li {
+    color: rgba(255, 255, 255, 0.9);
+}
+.price-card.founder-edition .price-features li .check {
+    color: #ffd27a;
+}
+.price-card.founder-edition .price-features li.highlight {
+    color: #fff;
+}
+.price-card.founder-edition .price-device {
+    color: rgba(255, 255, 255, 0.7);
+}
+.price-card.founder-edition .price-trust {
+    color: rgba(255, 255, 255, 0.6);
 }
 .price-badge.founder-badge {
     background: linear-gradient(90deg, #ff8c00, #ffaa40);
