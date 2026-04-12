@@ -90,13 +90,18 @@
         },
         {
           "@type": "Question",
-          "name": "What API keys do I need?",
-          "acceptedAnswer": { "@type": "Answer", "text": "OpenAI API key for transcription and AI analysis (avg $3-5/month) and optionally Apify (free trial available, for reliable Instagram scraping). ContentSpy walks you through setup." }
+          "name": "Do I need API keys to get started?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Every plan includes 25 free profile analyses per month via managed scraping — no API setup required. For unlimited analyses, connect your own free Apify account (5-minute setup). AI features use your OpenAI API key (avg $3-5/month)." }
+        },
+        {
+          "@type": "Question",
+          "name": "What's included vs. BYOK (Bring Your Own Key)?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Included: 25 profile scrapes/month, viral detection, hooks analysis, and local data storage. BYOK: connect a free Apify account for unlimited scraping, and an OpenAI key (avg $3-5/mo) for transcription and AI features. You can start immediately with zero setup." }
         },
         {
           "@type": "Question",
           "name": "Mac or Windows?",
-          "acceptedAnswer": { "@type": "Answer", "text": "macOS is available now. Windows version is coming in v2.2 — join the waitlist to get notified when it launches in Q3 2026." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Both available now. macOS and Windows (.exe) are included with every plan. Download your preferred version right after purchase." }
         },
         {
           "@type": "Question",
@@ -158,6 +163,9 @@
         <p class="hero-subtitle">
             ContentSpy downloads competitor videos from Instagram, YouTube & TikTok — transcribes every word with AI, breaks down every frame with Storyboard, and shows you exactly why they win and how to replicate it.
         </p>
+        <div class="hero-byok-badge">
+            <span class="byok-badge-icon">&#10024;</span> Includes 25 free profile analyses per month — no API setup required to start
+        </div>
         <div class="hero-cta">
             <a href="#pricing" class="btn btn-lg btn-primary btn-glow">
                 Start Free 7-Day Trial
@@ -501,49 +509,30 @@
     </div>
 </section>
 
-<!-- SOCIAL PROOF -->
-<section class="proof" id="proof">
+<!-- PRODUCT PROOF (real metrics from beta) -->
+<section class="product-proof" id="proof">
     <div class="container">
         <div class="section-header">
-            <span class="section-tag">Testimonials</span>
-            <h2>Trusted by Content Professionals</h2>
+            <span class="section-tag">Built &amp; Tested</span>
+            <h2>Real Numbers. No Fluff.</h2>
+            <p class="section-sub">ContentSpy v2.0 is production-ready — here's the proof from our beta.</p>
         </div>
-        <div class="proof-grid">
-            <div class="proof-card" data-animate>
-                <div class="proof-result">+34% engagement</div>
-                <div class="proof-stars">★★★★★</div>
-                <p class="proof-text">"Replaced 3 hours of daily manual monitoring with 10 minutes. Our engagement rate jumped 34% in the first month."</p>
-                <div class="proof-author">
-                    <div class="proof-avatar">A</div>
-                    <div>
-                        <div class="proof-name">Alex R.</div>
-                        <div class="proof-role">SMM Manager, Digital Agency</div>
-                    </div>
-                </div>
+        <div class="product-proof-grid">
+            <div class="product-proof-card" data-animate>
+                <div class="product-proof-num">2,319</div>
+                <div class="product-proof-label">Reels transcribed in beta</div>
             </div>
-            <div class="proof-card" data-animate>
-                <div class="proof-result">2× client retention</div>
-                <div class="proof-stars">★★★★★</div>
-                <p class="proof-text">"Our clients love the PDF reports — it looks like we did weeks of research. The AI analysis alone is worth the price."</p>
-                <div class="proof-author">
-                    <div class="proof-avatar">M</div>
-                    <div>
-                        <div class="proof-name">Maria K.</div>
-                        <div class="proof-role">Content Strategist, Agency Owner</div>
-                    </div>
-                </div>
+            <div class="product-proof-card" data-animate>
+                <div class="product-proof-num">820</div>
+                <div class="product-proof-label">Automated tests passing</div>
             </div>
-            <div class="proof-card" data-animate>
-                <div class="proof-result">2M views on next reel</div>
-                <div class="proof-stars">★★★★★</div>
-                <p class="proof-text">"Found a viral hook pattern I was completely missing. Applied it to my next 3 reels — one got 2M views. Not kidding."</p>
-                <div class="proof-author">
-                    <div class="proof-avatar">J</div>
-                    <div>
-                        <div class="proof-name">Jake T.</div>
-                        <div class="proof-role">Content Creator, 340K followers</div>
-                    </div>
-                </div>
+            <div class="product-proof-card" data-animate>
+                <div class="product-proof-num">66</div>
+                <div class="product-proof-label">Profiles tracked in beta</div>
+            </div>
+            <div class="product-proof-card" data-animate>
+                <div class="product-proof-num">v2.0</div>
+                <div class="product-proof-label">Production ready</div>
             </div>
         </div>
     </div>
@@ -731,19 +720,35 @@
                 <div class="faq-a"><p>100% on your computer. ContentSpy is a desktop app — no cloud, no servers storing your data. Your competitor research stays private.</p></div>
             </div>
             <div class="faq-item" data-animate>
-                <button class="faq-q">What API keys do I need?</button>
-                <div class="faq-a"><p>ContentSpy uses a BYOK model (Bring Your Own Key): you connect your own OpenAI API key for transcription & AI analysis. Average cost: <strong>$3–5/month</strong> even with heavy daily use — compared to $49–199/month SaaS fees. Optionally add Apify (free trial, for reliable Instagram scraping). ContentSpy walks you through setup in 2 minutes.</p></div>
+                <button class="faq-q">Do I need API keys to get started?</button>
+                <div class="faq-a"><p><strong>No.</strong> Every plan includes <strong>25 free profile analyses per month</strong> via our managed scraping — no API setup required. Just install, paste a profile URL, and go. For unlimited analyses, connect your own free Apify account (5-minute setup). AI features use your OpenAI API key (avg $3–5/month).</p></div>
+            </div>
+            <div class="faq-item" data-animate>
+                <button class="faq-q">What's included vs. BYOK (Bring Your Own Key)?</button>
+                <div class="faq-a">
+                    <div class="faq-byok-table">
+                        <div class="faq-byok-row faq-byok-header">
+                            <span>Feature</span><span>Included</span><span>BYOK</span>
+                        </div>
+                        <div class="faq-byok-row">
+                            <span>Profile scraping</span><span>25/month free</span><span>Unlimited (free Apify account)</span>
+                        </div>
+                        <div class="faq-byok-row">
+                            <span>Transcription &amp; AI</span><span>--</span><span>OpenAI key (avg $3-5/mo)</span>
+                        </div>
+                        <div class="faq-byok-row">
+                            <span>Viral detection &amp; hooks</span><span>Included</span><span>--</span>
+                        </div>
+                        <div class="faq-byok-row">
+                            <span>Local data storage</span><span>Included</span><span>--</span>
+                        </div>
+                    </div>
+                    <p style="margin-top:0.75rem;">You can start using ContentSpy immediately with zero setup. BYOK unlocks unlimited power when you're ready.</p>
+                </div>
             </div>
             <div class="faq-item" data-animate>
                 <button class="faq-q">Mac or Windows?</button>
-                <div class="faq-a">
-                    <p>macOS is available now. Windows version is coming in v2.2 — launching Q3 2026.</p>
-                    <form class="waitlist-form" id="windowsWaitlist">
-                        <input type="email" placeholder="your@email.com" class="waitlist-input" required>
-                        <button type="submit" class="btn btn-sm btn-primary">Notify Me</button>
-                    </form>
-                    <p class="waitlist-success" id="waitlistSuccess" style="display:none;color:var(--accent);font-size:0.85rem;margin-top:0.5rem;">✅ You're on the list! We'll email you when Windows launches.</p>
-                </div>
+                <div class="faq-a"><p>Both available now. macOS and Windows (.exe) are included with every plan. Download your preferred version right after purchase.</p></div>
             </div>
             <div class="faq-item" data-animate>
                 <button class="faq-q">Is there a free trial?</button>
@@ -751,7 +756,7 @@
             </div>
             <div class="faq-item" data-animate>
                 <button class="faq-q">Can I switch devices?</button>
-                <div class="faq-a"><p>Yes. Deactivate your old device with one click, then activate on the new one. Agency plan supports 3 simultaneous devices.</p></div>
+                <div class="faq-a"><p>Yes. Deactivate your old device with one click, then activate on the new one. Agency and Founder plans support 5 simultaneous devices.</p></div>
             </div>
             <div class="faq-item" data-animate>
                 <button class="faq-q">What's your refund policy?</button>
@@ -790,8 +795,8 @@
             <a href="#features">Features</a>
             <a href="#faq">FAQ</a>
             <a href="mailto:hello@contentspy.co">Support</a>
-            <a href="#privacy">Privacy Policy</a>
-            <a href="#terms">Terms</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 ContentSpy. All rights reserved.</p>

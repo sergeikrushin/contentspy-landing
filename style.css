@@ -1642,3 +1642,111 @@ body {
         max-width: 420px !important;
     }
 }
+
+/* ============================================
+   HERO BYOK BADGE
+   ============================================ */
+.hero-byok-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--accent);
+    background: var(--accent-subtle);
+    border: 1px solid rgba(249, 115, 22, 0.2);
+    margin-bottom: 8px;
+    animation: heroFadeUp 0.6s ease 0.2s both;
+}
+.byok-badge-icon {
+    font-size: 16px;
+}
+
+/* ============================================
+   PRODUCT PROOF (replaces fake testimonials)
+   ============================================ */
+.product-proof {
+    padding: 100px 0;
+}
+.product-proof-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+.product-proof-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 36px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.product-proof-card:hover {
+    border-color: rgba(249, 115, 22, 0.3);
+    transform: translateY(-4px);
+}
+.product-proof-num {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 900;
+    background: linear-gradient(135deg, #f97316, #fb923c, #fbbf24);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+.product-proof-label {
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+@media (max-width: 768px) {
+    .product-proof-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .product-proof-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   FAQ BYOK TABLE
+   ============================================ */
+.faq-byok-table {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    margin-top: 0.5rem;
+    font-size: 13px;
+}
+.faq-byok-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    gap: 0;
+}
+.faq-byok-row span {
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-secondary);
+}
+.faq-byok-row:last-child span {
+    border-bottom: none;
+}
+.faq-byok-header span {
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 11px;
+    background: rgba(255, 255, 255, 0.03);
+}
+.faq-item.active .faq-a {
+    max-height: 500px;
+}
