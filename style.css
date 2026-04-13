@@ -1154,9 +1154,15 @@ body {
 .final-cta-buttons {
     display: flex;
     justify-content: center;
+    align-items: stretch;
     gap: 16px;
     flex-wrap: wrap;
     margin-bottom: 16px;
+}
+.final-cta-buttons .btn {
+    align-items: center;
+    justify-content: center;
+    min-height: 56px;
 }
 .final-micro {
     font-size: 13px;
