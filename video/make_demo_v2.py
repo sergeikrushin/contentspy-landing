@@ -10,8 +10,8 @@ import os
 import shutil
 from PIL import Image, ImageDraw, ImageFont
 
-OUT_DIR = "/Users/Shared/app sergei/contentspy-landing/video"
-IMG = "/Users/Shared/app sergei/contentspy-landing/img"
+OUT_DIR = "/Users/Shared/workspace/products/contentspy/landing/video"
+IMG = "/Users/Shared/workspace/products/contentspy/landing/img"
 TMP = f"{OUT_DIR}/tmp_v2"
 OUTPUT = f"{OUT_DIR}/demo-v2.mp4"
 

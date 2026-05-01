@@ -4,7 +4,7 @@
 **Исполнитель:** Даша (landing agent)
 **Заказчик:** Сергей (через Катю)
 **Срок:** к 16 апреля (день AppSumo submission)
-**Файлы:** `/Users/Shared/app sergei/contentspy-landing/`
+**Файлы:** `/Users/Shared/workspace/products/contentspy/landing/`
 **Production URL:** https://contentspy.co
 **Связанные документы:** `/Users/Agent/workspace/products/contentspy/LAUNCH_PLAN_12W_2026.html`
 
@@ -321,8 +321,8 @@ const deadline = new Date('2026-04-30T23:59:59');
 **Проблема:** `index.html:764-765` — ссылки `#privacy` и `#terms` ведут в никуда. **AppSumo и LemonSqueezy ОБЯЗАТЕЛЬНО требуют privacy policy и terms.**
 
 **Решение:** Создать 2 файла:
-- `/Users/Shared/app sergei/contentspy-landing/privacy.html`
-- `/Users/Shared/app sergei/contentspy-landing/terms.html`
+- `/Users/Shared/workspace/products/contentspy/landing/privacy.html`
+- `/Users/Shared/workspace/products/contentspy/landing/terms.html`
 
 **Содержание:** Стандартный SaaS template, адаптированный под:
 - ContentSpy LLC / PT INDOGIG HRTECH INDONESIA как entity
@@ -679,7 +679,7 @@ ContentSpy = desktop app, **установка ОБЯЗАТЕЛЬНА** (DMG/EXE
 
 После каждого блока — отчёт в Telegram + push в git:
 ```bash
-cd "/Users/Shared/app sergei/contentspy-landing"
+cd "/Users/Shared/workspace/products/contentspy/landing"
 git add . && git commit -m "Block 1: critical landing fixes (Starter $89, Founder Edition, lead magnet)"
 git push
 ```

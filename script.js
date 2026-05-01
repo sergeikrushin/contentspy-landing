@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // === COUNTDOWN TIMER ===
 function updateCountdown() {
-    const deadline = new Date('2026-04-30T23:59:59');
+    const deadline = new Date('2026-05-07T23:59:59');
     const now = new Date();
     const diff = deadline - now;
     if (diff <= 0) {

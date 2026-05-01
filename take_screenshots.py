@@ -5,7 +5,7 @@ def take_screenshots():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         page = browser.new_page(viewport={"width": 1280, "height": 800})
-        base = "/Users/Shared/app sergei/contentspy-landing/img"
+        base = "/Users/Shared/workspace/products/contentspy/landing/img"
 
         # Dashboard
         page.goto("http://localhost:5055")
